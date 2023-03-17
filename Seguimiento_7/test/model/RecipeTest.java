@@ -6,10 +6,6 @@ import static org.junit.jupiter.api.Assertions.*;
 public class RecipeTest {
 
 
-    public RecipeTest(){
-
-
-    }
 
     private Recipe recipe;
 

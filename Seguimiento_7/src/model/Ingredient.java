@@ -1,5 +1,7 @@
 package model;
 
+import exceptions.NegativeNumberEntryException;
+
 public class Ingredient {
     private String name;
     private double weight;
@@ -8,12 +10,14 @@ public class Ingredient {
 
     }
 
-    public void addWeight(double weight){
+    public void addWeight(double weight) throws Exception{
+        if(weight < 0) throw new NegativeNumberEntryException();
         this.weight += weight;
     }
 
-    public void removeWeight(){
-        this.weight = 0;
+    public void removeWeight(double n) throws Exception{
+        if(n < 0) throw new NegativeNumberEntryException();
+        this.weight -= n;
     }
 
     public String getName() {
